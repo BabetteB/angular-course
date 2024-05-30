@@ -1,0 +1,57 @@
+<div class="course-card" *ngIf="course"
+        [ngClass]="cardClasses()">
+
+    <div class="course-title" [style.text-decoration]="'underline'">
+        {{ index + ' ' + course.description}}
+    </div>
+
+    <h5 [ngStyle]="{'text-decoration': 'underline'}">{{ifHeading}}</h5>
+    @if (course.id == 1) {
+        <h4>Course with id 1 is detected</h4>
+    }
+    @else if (course.iconUrl) {
+        <img width="300" alt="Angular Logo"
+         [src]="course.iconUrl">
+    }
+    @else {
+        <h3 [ngStyle]="imageTextStyle()">No image available</h3>
+    }
+
+    <div class="course-description">
+        {{course.longDescription}}
+    </div>
+
+    <div class="course-category" [ngSwitch]="course.category">
+
+        <div class="category" *ngSwitchCase="'BEGINNER'">Beginner ng</div>
+        <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate ng</div>
+        <div class="category" *ngSwitchCase="'ADVANCED'">Advanced ng</div>
+        <div class="category" *ngSwitchDefault>All Levels ng</div>
+    </div>
+
+
+    <div class="course-category">
+        @switch (course.category) {
+            @case ("BEGINNER") {
+                <div class="category">Beginner</div>
+            }
+            @case ("INTERMEDIATE") {
+                <div class="category">Intermediate</div>
+            }
+            @case ("ADVANCED") {
+                <div class="category">Advanced</div>
+            }
+            @default {}
+        }
+    </div>
+
+    <h5>{{ngifHeading}}</h5>
+    <button *ngIf="course.category; else noCategory" (click)="onCourseViewed()">View Course</button>
+
+    <ng-template #noCategory>
+
+        <p>Not viewable</p>
+
+    </ng-template>
+
+</div>

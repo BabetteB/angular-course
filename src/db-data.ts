@@ -15,7 +15,7 @@ export const COURSES: any = [
         description: "RxJs In Practice Course",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/rxjs-in-practice-course.png',
         longDescription: "Understand the RxJs Observable pattern, learn the RxJs Operators via practical examples",
-        category: 'BEGINNER',
+        //category: 'BEGINNER',
         lessonsCount: 10
     },
 
@@ -23,14 +23,14 @@ export const COURSES: any = [
         id: 3,
         description: 'NgRx In Depth',
         longDescription: "Learn the modern Ngrx Ecosystem, including Store, Effects, Router Store, Ngrx Entity, Dev Tools and Schematics.",
-        iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-ngrx-course.png',
+        //iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-ngrx-course.png',
         category: 'ADVANCED'
     },
 
     {
         id: 4,
         description: "Angular for Beginners",
-        iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
+        //iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
         longDescription: "Establish a solid layer of fundamentals, learn what's under the hood of Angular",
         category: 'BEGINNER',
         lessonsCount: 10
@@ -40,7 +40,7 @@ export const COURSES: any = [
         description: 'Angular Security Course',
         longDescription: "Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
-        category: 'ADVANCED',
+        //category: 'ADVANCED',
         lessonsCount: 11
     },
     {
